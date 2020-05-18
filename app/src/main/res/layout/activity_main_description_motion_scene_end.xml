@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minHeight="@dimen/dimen_dp_100"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/content_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/himalayas" />
+
+
+
+    <LinearLayout
+        android:id="@+id/detail_quantity_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_dp_100"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:tag="sticky"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/header_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/detail_remove_item"
+            android:layout_width="@dimen/dimen_dp_50"
+            android:layout_height="@dimen/dimen_dp_50"
+            android:padding="@dimen/dimen_dp_5"
+            android:src="@android:drawable/btn_plus" />
+
+        <TextView
+            android:id="@+id/detail_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_dp_50"
+            android:layout_marginRight="@dimen/dimen_dp_50"
+            android:text="10"
+            android:textSize="45sp" />
+
+        <ImageView
+            android:id="@+id/detail_add_item"
+            android:layout_width="@dimen/dimen_dp_50"
+            android:layout_height="@dimen/dimen_dp_50"
+            android:padding="@dimen/dimen_dp_5"
+            android:src="@android:drawable/btn_plus" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/detail_dollar_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="@dimen/dimen_sp_35" />
+
+        <TextView
+            android:id="@+id/detail_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_quantity_detail_ll"
+            android:layout_marginTop="@dimen/dimen_dp_10"
+            android:gravity="center"
+            android:text="Tesco Potato"
+            android:textSize="@dimen/dimen_sp_20" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_sp_18"
+            android:text="Lorem ipsum dolor sit amet, consectetur
+             adipiscing elit, sed do eiusmod tempor incididunt ut
+             labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut
+               aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse
+                 cillum dolore eu fugiat nulla pariatur. Excepteur
+                 sint occaecat cupidatat non proident, sunt
+                 in culpa qui officia deserunt mollit anim id
+                  est laborum.
+       "
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dimen_sp_20" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
