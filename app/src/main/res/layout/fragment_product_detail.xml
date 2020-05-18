@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true">
 
     <RelativeLayout
@@ -20,7 +21,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_dp_30"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="@dimen/dimen_dp_10"
+            android:gravity="left"
+            app:ci_drawable="@drawable/ic_action_name"
+            app:ci_drawable_unselected="@drawable/white_radius"  />
 
         <ImageView
             android:id="@+id/detail_favorite"

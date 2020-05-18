@@ -20,10 +20,10 @@
         motion:constraintSetStart="@+id/start"
         motion:duration="1000"
         motion:motionInterpolator="linear">
-<!--        <OnSwipe-->
-<!--            motion:dragDirection="dragUp"-->
-<!--            motion:touchAnchorId="@+id/background"-->
-<!--            motion:touchAnchorSide="bottom" />-->
+<!--                <OnSwipe-->
+<!--                    motion:dragDirection="dragUp"-->
+<!--                    motion:touchAnchorId="@+id/background"-->
+<!--                    motion:touchAnchorSide="bottom" />-->
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -32,9 +32,24 @@
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:alpha="1.0"
-            android:scaleX="1.1"
-            android:scaleY="1.1"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
             motion:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_begin="200dp" />
+
+        <Constraint
+            android:id="@id/guidelineTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_begin="320dp" />
 
     </ConstraintSet>
 
@@ -42,11 +57,25 @@
         <Constraint
             android:id="@id/background"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:alpha="1.0"
             android:translationX="0dp"
             android:translationY="0dp"
             motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_begin="66dp" />
+
+        <Constraint
+            android:id="@id/guidelineTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            motion:layout_constraintGuide_begin="110dp" />
 
     </ConstraintSet>
 </MotionScene>

@@ -24,6 +24,7 @@
         <OnSwipe
             motion:dragDirection="dragUp"
             motion:touchAnchorId="@+id/motionLayout"
+            motion:onTouchUp="stop"
             motion:touchAnchorSide="bottom" />
     </Transition>
 
@@ -46,7 +47,7 @@
         <Constraint
             android:id="@+id/motionLayout"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             motion:layout_constraintTop_toTopOf="parent"
             motion:progress="1" />
 

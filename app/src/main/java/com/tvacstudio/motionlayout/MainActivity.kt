@@ -14,6 +14,15 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
     private var deltaY: Int = 0
     var alpha = 1.0f
     var newAlpha = 1.0f
+
+    val currentPage = 0
+    val NUM_PAGES = 0
+
+    var IMAGES =
+        arrayOf<Int>(R.drawable.himalayas, R.drawable.monterey, R.drawable.sea, R.drawable.roard)
+    private val ImagesArray = ArrayList<Int>()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.motion_17_coordination)
@@ -22,6 +31,13 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
         description.text = resources.getString(R.string.large_text)
         Utils.makeTextViewResizable(description, 4, "See More", true)
         scrollable.setOnScrollChangedListener(this)
+        init()
+    }
+
+    private fun init() {
+        for (i in IMAGES.indices) ImagesArray.add(IMAGES[i])
+        background.adapter = SlidingImage_Adapter(this, ImagesArray)
+        detail_indicator.setViewPager(background)
     }
 
     private fun fadeOut(view: View) {
