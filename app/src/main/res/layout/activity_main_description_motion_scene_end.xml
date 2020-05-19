@@ -18,8 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/himalayas" />
 
-
-
     <LinearLayout
         android:id="@+id/detail_quantity_ll"
         android:layout_width="match_parent"

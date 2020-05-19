@@ -1,4 +1,4 @@
-package com.tvacstudio.motionlayout;
+package com.cloudasset.motionlayout;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -96,7 +96,7 @@ public class Utils {
         if (str.contains(spanableText)) {
 
 
-            ssb.setSpan(new MySpannable(false) {
+            ssb.setSpan(new CustomSpannable(false) {
                 @Override
                 public void onClick(View widget) {
                     if (viewMore) {

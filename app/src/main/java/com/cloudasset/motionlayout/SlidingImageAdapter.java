@@ -1,4 +1,4 @@
-package com.tvacstudio.motionlayout;
+package com.cloudasset.motionlayout;
 
 import android.content.Context;
 import android.os.Parcelable;
@@ -12,15 +12,14 @@ import androidx.viewpager.widget.PagerAdapter;
 import java.util.ArrayList;
 
 
-public class SlidingImage_Adapter extends PagerAdapter {
-
+public class SlidingImageAdapter extends PagerAdapter {
 
     private ArrayList<Integer> IMAGES;
     private LayoutInflater inflater;
     private Context context;
 
 
-    public SlidingImage_Adapter(Context context, ArrayList<Integer> IMAGES) {
+    public SlidingImageAdapter(Context context, ArrayList<Integer> IMAGES) {
         this.context = context;
         this.IMAGES = IMAGES;
         inflater = LayoutInflater.from(context);
@@ -38,15 +37,13 @@ public class SlidingImage_Adapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup view, int position) {
-        View imageLayout = inflater.inflate(R.layout.slidingimages_layout, view, false);
+        View imageLayout = inflater.inflate(R.layout.product_description_images, view, false);
 
         assert imageLayout != null;
         final ImageView imageView = (ImageView) imageLayout
                 .findViewById(R.id.image);
 
-
         imageView.setImageResource(IMAGES.get(position));
-
         view.addView(imageLayout, 0);
 
         return imageLayout;

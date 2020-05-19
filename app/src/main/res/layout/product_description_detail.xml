@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cloudasset.motionlayout.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:showIn="@layout/product_description">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/detail_quantity_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_dp_100"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:tag="sticky">
+
+
+            <ImageView
+                android:id="@+id/detail_remove_item"
+                android:layout_width="@dimen/dimen_dp_50"
+                android:layout_height="@dimen/dimen_dp_50"
+                android:padding="@dimen/dimen_dp_5"
+                android:src="@drawable/ic_plus_circle"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/detail_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_dp_50"
+                android:layout_marginRight="@dimen/dimen_dp_50"
+                android:text="10"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/detail_add_item"
+                android:layout_width="@dimen/dimen_dp_50"
+                android:layout_height="@dimen/dimen_dp_50"
+                android:padding="@dimen/dimen_dp_8"
+                android:src="@drawable/ic_minus_circle"
+                android:tint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detail_dollar_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="10"
+                android:textSize="@dimen/dimen_sp_35" />
+
+            <TextView
+                android:id="@+id/detail_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_quantity_detail_ll"
+                android:layout_marginTop="@dimen/dimen_dp_10"
+                android:gravity="center"
+                android:text="Tesco Potato"
+                android:textSize="@dimen/dimen_sp_20" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dimen_sp_18"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/dimen_sp_20" />
+
+            <TextView
+                android:id="@+id/txtView_seeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_action_ic_down_arrow"
+                android:text="See more"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.cloudasset.motionlayout.StickyScrollView>

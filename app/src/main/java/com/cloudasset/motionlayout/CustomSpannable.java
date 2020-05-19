@@ -1,18 +1,18 @@
-package com.tvacstudio.motionlayout;
+package com.cloudasset.motionlayout;
 
 import android.graphics.Color;
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-public class MySpannable extends ClickableSpan {
+public class CustomSpannable extends ClickableSpan {
 
     private boolean isUnderline = true;
 
     /**
      * Constructor
      */
-    public MySpannable(boolean isUnderline) {
+    public CustomSpannable(boolean isUnderline) {
         this.isUnderline = isUnderline;
     }
 

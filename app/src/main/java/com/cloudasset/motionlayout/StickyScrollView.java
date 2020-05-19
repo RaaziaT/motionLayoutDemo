@@ -1,4 +1,4 @@
-package com.tvacstudio.motionlayout;
+package com.cloudasset.motionlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.ScrollView;
 
 import androidx.core.widget.NestedScrollView;
 

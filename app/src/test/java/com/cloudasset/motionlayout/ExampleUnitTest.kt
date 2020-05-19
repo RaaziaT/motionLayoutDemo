@@ -1,4 +1,4 @@
-package com.tvacstudio.motionlayout
+package com.cloudasset.motionlayout
 
 import org.junit.Test
 
