@@ -32,14 +32,10 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
 
         label.text = detail_dollar_amount.text
         sublabel.text = detail_item_name.text
-
         description.text = resources.getText(R.string.large_text)
-//        description.text = "arrayOf<Int>(R.drawable.himalayas, R.drawable.monterey, R.drawable.sea, R.drawable.roard)"
         val dm = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(dm)
-
         val height = dm.heightPixels
-
         detail_quantity_ll.measure(0, 0)
         val heightOfQuantity = detail_quantity_ll.measuredHeight
         detail_dollar_amount.measure(0, 0)
@@ -64,10 +60,6 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
             descriptionLayout.setTransition(R.id.start, R.id.end)
         }
 
-        // used by TextView
-
-//        expand_text_view.text
-//        Utils.makeTextViewResizable(description, label, sublabel, 6, "See More", true)
         scrollable.setOnScrollChangedListener(this)
         init()
 
@@ -79,18 +71,6 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
         background.adapter = SlidingImageAdapter(this, ImagesArray)
         detail_indicator.setViewPager(background)
     }
-
-//        val sizeDialogAdapter = SizeDialogAdapter()
-//        val layoutManager =
-//            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        background.layoutManager = layoutManager
-//        background.adapter = sizeDialogAdapter
-//        sizeDialogAdapter.updateList(ImagesArray)
-//        val pagerSnapHelper = PagerSnapHelper()
-//        pagerSnapHelper.attachToRecyclerView(background)
-//        detail_indicator.attachToRecyclerView(background, pagerSnapHelper)
-//        sizeDialogAdapter.registerAdapterDataObserver(detail_indicator.adapterDataObserver);
-
     private fun fadeOut(view: View) {
         Log.i("ViewNameFadeOut", "Name: $view")
         if (view.visibility != View.GONE) {
@@ -164,18 +144,6 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
     }
 
     override fun onScrollChanged(scrollX: Int, scrollY: Int, oldscrollX: Int, oldScrollY: Int) {
-
-
-        //if scroll bottom
-//        if (scrollY < oldScrollY) {
-//            newAlpha = alpha - 0.1f
-//            if (newAlpha >= 0) {
-//                label.alpha = newAlpha - 0.1f
-//                sublabel.alpha = newAlpha - 0.1f
-//                alpha = newAlpha
-//            }
-//        }
-
         //if scroll top
         if (scrollY > oldScrollY) {
             newAlpha = alpha + 0.1f
@@ -185,29 +153,5 @@ class MainActivity : AppCompatActivity(), StickyScrollView.OnScrollChangedListen
                 alpha = newAlpha
             }
         }
-
-
-//        if (scrollY > oldScrollY) {
-//            //swipeDown
-////            fadeOutHeader(label)
-////            fadeOutHeader(sublabel)
-//        }
-//        if (scrollY < oldScrollY) {
-//            //swipeUp
-//            fadeInHeader(label)
-//            fadeInHeader(sublabel)
-//        }
-//        if (scrollY == 0) {
-//            //Top
-//            fadeOutHeader(label)
-//            fadeOutHeader(sublabel)
-//        }
-//        if (scrollY == (scrollable.measuredHeight - scrollable.getChildAt(0).measuredHeight)) {
-//            //Bottom
-////            fadeInHeader(label)
-////            fadeInHeader(sublabel)
-//        }
-
-
     }
 }
