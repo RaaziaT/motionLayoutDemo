@@ -111,4 +111,5 @@
     <string name="update">Update</string>
     <string name="view_stock">View Stock</string>
     <string name="out_of_stock">Out of stock</string>
+    <string name="title_activity_main_b">MainActivity</string>
 </resources>
