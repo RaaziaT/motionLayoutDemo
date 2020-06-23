@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnimationActivity">
+        <activity android:name=".DraggableGridView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,13 +17,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivityB"
-            android:label="@string/title_activity_main_b"
-            android:theme="@style/AppThemeB" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MainActivityJava">
+            android:name=".rnd.TabedActivity"
+            android:label="@string/title_activity_tabed"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".walkthrough.WalkThroughActivity">
 
         </activity>
+        <activity
+            android:name=".zapanimation.AnimationActivity"
+            android:theme="@style/AppThemeB" />
+        <activity
+            android:name=".rnd.MainActivityB"
+            android:label="@string/title_activity_main_b"
+            android:theme="@style/AppThemeB" />
+        <activity android:name=".productdetails.MainActivity" />
+        <activity android:name=".productdetails.MainActivityJava" />
 
         <meta-data
             android:name="preloaded_fonts"

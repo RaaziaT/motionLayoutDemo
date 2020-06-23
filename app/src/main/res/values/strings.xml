@@ -112,4 +112,9 @@
     <string name="view_stock">View Stock</string>
     <string name="out_of_stock">Out of stock</string>
     <string name="title_activity_main_b">MainActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tabed">TabedActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
